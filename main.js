@@ -1,3 +1,20 @@
+// Import the functions you need from the SDKs you need
+import {initializeApp} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+
+
+const firebaseConfig={
+    apiKey: "AIzaSyD7fcW9fECCvCnqxQEJk_KHM2sF2t3rucs",
+    authDomain: "dream11database.firebaseapp.com",
+    projectId: "dream11database",
+    storageBucket: "dream11database.appspot.com",
+    messagingSenderId: "363251093036",
+    appId: "1:363251093036:web:7a58b5e5c46d416028cb89",
+    measurementId: "G-VNKER69MN0"
+};
+
+// Initialize Firebase
+const db=initializeApp(firebaseConfig);
+
 db.collection('matches').get().then((snapshot) => {
     console.log(snapshot)
 })
