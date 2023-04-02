@@ -13,11 +13,13 @@ const firebaseConfig={
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+initializeApp(firebaseConfig);
+
+const db = getFirestore();
 
 
 const matchesRef = collection(db, "matches");
+
 getDocs(matchesRef).then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
     console.log(doc.id, " => ", doc.data());
