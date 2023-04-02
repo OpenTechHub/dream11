@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dream 11</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import {getAnalytics} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig={
+            apiKey: "AIzaSyD7fcW9fECCvCnqxQEJk_KHM2sF2t3rucs",
+            authDomain: "dream11database.firebaseapp.com",
+            projectId: "dream11database",
+            storageBucket: "dream11database.appspot.com",
+            messagingSenderId: "363251093036",
+            appId: "1:363251093036:web:7a58b5e5c46d416028cb89",
+            measurementId: "G-VNKER69MN0"
+        };
+
+        // Initialize Firebase
+        const db=initializeApp(firebaseConfig);
+        const analytics=getAnalytics(app);
+    </script>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
