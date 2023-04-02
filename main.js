@@ -17,6 +17,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-db.collection('matches').get().then((snapshot) => {
-    console.log(snapshot)
-})
+const matchesRef = collection(db, "matches");
+getDocs(matchesRef).then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    console.log(doc.id, " => ", doc.data());
+  });
+});
